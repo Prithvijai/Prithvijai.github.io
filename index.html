@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prithvi | Robotics & ML Engineer</title>
+    <link rel="stylesheet" href="styles.css">
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f5f5f5;
+            scroll-behavior: smooth;
         }
         header {
             background-color: #2c3e50;
@@ -51,12 +53,20 @@
             color: white;
             margin-top: 20px;
         }
+        .profile-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 20px auto;
+            display: block;
+        }
     </style>
 </head>
 <body>
     <header>
         <h1>Prithvi</h1>
-        <p>Robotics Software Engineer & Machine Learning Engineer</p>
+        <p class="typing"></p>
     </header>
 
     <nav>
@@ -68,7 +78,8 @@
     <div class="container">
         <section id="about">
             <h2>About Me</h2>
-            <p>I am a passionate Robotics Software Engineer and Machine Learning Engineer with experience in developing intelligent systems and autonomous robots.</p>
+            <img src="images/profile.jpg" alt="Prithvi's Photo" class="profile-photo">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
         </section>
 
         <section id="projects">
@@ -77,14 +88,14 @@
             <div class="project">
                 <h3>Autonomous Drone Navigation</h3>
                 <img src="images/drone_project.jpg" alt="Autonomous Drone">
-                <p>Developed an autonomous drone capable of navigating through complex environments using computer vision and reinforcement learning.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
                 <a href="https://github.com/username/autonomous-drone">View Project on GitHub</a>
             </div>
 
             <div class="project">
                 <h3>Robotic Arm Control with ML</h3>
                 <img src="images/robotic_arm.jpg" alt="Robotic Arm">
-                <p>Designed a robotic arm that learns to perform tasks through machine learning algorithms.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
                 <a href="https://github.com/username/robotic-arm-ml">View Project on GitHub</a>
             </div>
         </section>
@@ -99,5 +110,23 @@
     <footer>
         <p>&copy; 2025 Prithvi. All rights reserved.</p>
     </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            new Typed('.typing', {
+                strings: ["Robotics Software Engineer", "Machine Learning Engineer"],
+                typeSpeed: 50,
+                backSpeed: 25,
+                loop: true
+            });
+
+            $('nav a').on('click', function() {
+                $('nav a').removeClass('active');
+                $(this).addClass('active');
+            });
+        });
+    </script>
 </body>
 </html>
