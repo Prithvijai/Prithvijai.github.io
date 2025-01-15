@@ -127,6 +127,36 @@
             font-weight: bold;
         }
 
+        .project {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            padding: 10px;
+            transition: all 0.3s ease;
+        }
+        .image-container {
+            overflow: hidden;
+            width: 100%;
+            height: auto;
+            max-height: 300px; /* Adjust as needed */
+            transition: max-height 0.3s ease;
+        }
+        .expandable-image {
+            width: 100%;
+            height: auto;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        .expandable-image:hover {
+            transform: scale(1.05); /* Slight zoom on hover */
+        }
+        .expanded .image-container {
+            max-height: none;
+        }
+        .expanded .expandable-image {
+            transform: scale(1.2);
+        }
+
     </style>
 </head>
 <body>
@@ -154,7 +184,7 @@
 
             <div class="project">
                 <h3>Maze Solving and Path planning for end-effector of MyCobot Pro 600</h3>
-                <div class="gallery">
+                <div class="image-container">
                     <a href="./image copy.png" data-lightbox="mycobot" data-title="Path planning visualization">
                         <img src="./image copy.png" alt="Path planning visualization">
                     </a>
