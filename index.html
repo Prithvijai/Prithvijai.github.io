@@ -55,11 +55,11 @@
             margin-top: 20px;
         }
         .typing::after {
-            content: '|';
+            content: '';
             animation: blink 0.7s infinite;
             position: relative;
-            top: -5px; /* Cursor positioning fix */
         }
+
         @keyframes blink {
             0%, 100% { opacity: 1; }
             50% { opacity: 0; }
@@ -92,35 +92,35 @@
             <div class="project">
                 <h3>Maze Solving and Path planning for end-effector of MyCobot Pro 600</h3>
                 <img src="./image copy.png" alt="Path planning visualization">    
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
+                <p>Implemented a path planning algorithm for the MyCobot Pro 600 to solve mazes and navigate efficiently.</p>
                 <a href="https://github.com/username/autonomous-drone">View Project on GitHub</a>
             </div>
 
             <div class="project">
                 <h3>Autonomous Mobile Robot for Indoor Navigation</h3>
                 <img src="./Screenshot from 2025-01-06 14-39-02.png" alt="Map generation with SLAM">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
+                <p>Used Fusion360 to Designed and developed an autonomous mobile robot in ROS2 and Implemented SLAM for indoor navigation.</p>
                 <a href="https://github.com/Prithvijai/microbot">View Project on GitHub</a>
             </div>
 
             <div class="project">
                 <h3>Stitched Fabric Defect Detection using a Real-Robotic Arm</h3>
                 <img src="./Robotic_arm_photo.jpeg" alt="Robotic Arm">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
+                <p>3D printed a robotic arm vision system to detect defects in stitched fabric.</p>
                 <!-- <a href="https://github.com/username/robotic-arm-ml">View Project on GitHub</a> -->
             </div>
 
             <div class="project">
                 <h3>Fine-tuning YoloV5 for Stitched Fabric Defect Detection.</h3>
                 <img src="./frabric_val_batch0_pred.jpg" alt="Detection on TestData">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
+                <p>Developed ROS2 packages for custom robotic arm and Fine-tuned the YOLOv5 model for precise defect detection on stitched fabric datasets. got about 80% accuracy</p>
                 <a href="https://github.com/Prithvijai/cycloidal_arm_packages.git">View Project on GitHub</a>
             </div>
 
             <div class="project">
                 <h3>2D navigation for Hector-quadrotor drone in ROS and S500 Drone Building</h3>
-                <img src="./robotic_arm.jpg" alt="Robotic Arm">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
+                <img src="./drone.png" alt="Robotic Arm">
+                <p>Implemented 2D navigation for Hector-Quadrotor in ROS and constructed the S500 drone and done a testing flight.</p>
                 <a href="https://github.com/Prithvijai/cycloidal_arm_packages.git">View Project on GitHub</a>
             </div>
 
@@ -128,7 +128,7 @@
 
         <section id="contact 📞">
             <h2>Contact</h2>
-            <p>Email: <a href="prithvijai0510@gmail.com"></a></p>
+            <p>Email: prithvijai0510@gmail.com</p>
             <p>LinkedIn: <a href="https://www.linkedin.com/in/prithvi-jai-ramesh/" target="_blank">prithvi-jai-ramesh</a></p>
         </section>
     </div>
@@ -146,8 +146,10 @@
                 strings: ["Robotics Software and Machine Learning Engineer 🤖"],
                 typeSpeed: 50,
                 backSpeed: 25,
-                loop: false
+                loop: false,
+                showCursor: true  // Ensures only one cursor is visible
             });
+
         });
     </script>
 
